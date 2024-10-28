@@ -43,6 +43,20 @@ Here’s a structured plan with steps and code snippets to complete the project 
 ### Step 9: Model Evaluation
 - **Training Accuracy**: Achieved accuracy on the training set.
 - **Testing Accuracy**: Achieved accuracy on the testing set, indicating model performance and generalizability.
+Using a Support Vector Classifier (SVC) with `random_state=36`, we evaluated the model’s performance on the test set. Here is the detailed classification report:
 
+| Metric        | Class 0 (Politics) | Class 1 (Sports) | Class 2 (Entertainment) | Overall Accuracy |
+|---------------|--------------------|-------------------|-------------------------|-------------------|
+| Precision     | 1.00               | 0.65             | 0.86                    | **0.79**         |
+| Recall        | 0.47               | 1.00             | 1.00                    | -                |
+| F1-Score      | 0.64               | 0.79             | 0.92                    | -                |
+| Support (No. of Samples) | 15         | 11              | 12                      | -                |
+
+- **Overall Accuracy**: 79%
+- **Precision** indicates high accuracy in predicting political (1.00) and entertainment (0.86) content but lower for sports (0.65).
+- **Recall** shows that the model captures nearly all true instances for entertainment (1.00) and sports (1.00) but less effectively for politics (0.47).
+- **F1-Score** provides a balance between precision and recall, with higher values for entertainment content.
+
+The SVC model performs reasonably well across the categories, particularly excelling in detecting entertainment content, with potential areas of improvement in detecting political content.
 ## Conclusion
 This project provides a complete pipeline for gathering, storing, and analyzing data from Telegram channels. The results highlight the accuracy of a simple machine learning model in classifying content types across different channels.
