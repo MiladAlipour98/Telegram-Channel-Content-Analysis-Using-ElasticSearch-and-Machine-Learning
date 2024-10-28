@@ -1,0 +1,2 @@
+# Telegram-Channel-Content-Analysis-Using-ElasticSearch-and-Machine-Learning
+This project involves collecting, processing, and classifying data from specific Telegram channels using Python and ElasticSearch. It provides insights into political, sports, and entertainment content by crawling data, storing it in a database, preprocessing text, and training a machine learning model for content classification.
